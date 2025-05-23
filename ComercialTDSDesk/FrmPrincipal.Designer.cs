@@ -339,6 +339,7 @@
             pnlCentral.Size = new Size(1044, 517);
             pnlCentral.TabIndex = 4;
             pnlCentral.Visible = false;
+            pnlCentral.Paint += pnlCentral_Paint;
             // 
             // FrmPrincipal
             // 
