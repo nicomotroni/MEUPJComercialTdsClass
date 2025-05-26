@@ -20,7 +20,7 @@ namespace ComercialTDSClass
         public List<Endereco>? Enderecos { get; set; }
         public Cliente() { } 
         public Cliente(string nome, string cpf, string telefone, string email, DateTime dataNascimento, DateTime dataCadastro, bool ativo, List<Endereco>? enderecos)
-        {// este é o construtor que utilizaremos para inserir o cliente
+        {      // este é o construtor que utilizaremos para inserir o cliente
             Nome = nome;
             Cpf = cpf;
             Telefone = telefone;
@@ -98,6 +98,7 @@ namespace ComercialTDSClass
             cmd.Connection.Close();
             return cliente;
         }
+        
         public static List<Cliente> ObterLista()
         {
             List<Cliente> clientes = new();
