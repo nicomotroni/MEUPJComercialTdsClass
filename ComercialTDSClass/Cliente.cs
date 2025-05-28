@@ -98,7 +98,6 @@ namespace ComercialTDSClass
             cmd.Connection.Close();
             return cliente;
         }
-        
         public static List<Cliente> ObterLista()
         {
             List<Cliente> clientes = new();
