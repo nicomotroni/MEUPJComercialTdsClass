@@ -138,4 +138,4 @@ namespace ComercialTDSClass
             }
 
     }
-//precisa corrigir o de pedido também pois esta com muitos erros nesse 
+/*tabela do item de pedido foi corrigido após estar com alguns defeitos que já foram atualizados 

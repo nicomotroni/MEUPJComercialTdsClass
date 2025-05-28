@@ -18,7 +18,7 @@ namespace ComercialTDSClass
         public DateTime DataCadastro { get; set; }
         public bool Ativo { get; set; }
         public List<Endereco>? Enderecos { get; set; }
-        public Cliente() { } 
+        public Cliente() { }
         public Cliente(string nome, string cpf, string telefone, string email, DateTime dataNascimento, DateTime dataCadastro, bool ativo, List<Endereco>? enderecos)
         {      // este é o construtor que utilizaremos para inserir o cliente
             Nome = nome;
@@ -39,6 +39,7 @@ namespace ComercialTDSClass
             Ativo = ativo;
             Enderecos = enderecos;
         }
+        //atualizar o frm de clientes (não foi feito ainda)
         public Cliente(int id, string nome, string cpf, string telefone, string email, DateTime dataNascimento, DateTime dataCadastro, bool ativo)
         {
             Id = id;
@@ -107,21 +108,26 @@ namespace ComercialTDSClass
             while (dr.Read())
             {
                 clientes.Add(new(
-                              dr.GetInt32(0),
-                            dr.GetString(1),
-                            dr.GetString(2),
-                            dr.GetString(3),
-                            dr.GetString(4),
-                            dr.GetDateTime(4),
-                            dr.GetDateTime(5),
-                            dr.GetBoolean(6),
-                            Endereco.ObterListaPorClienteId(dr.GetInt32(0))
-                        )
-                    );
+                    dr.GetInt32(0),
+                    dr.GetString(1),
+                    dr.GetString(2),
+                    dr.GetString(3),
+                    dr.GetString(4),
+                    dr.GetDateTime(4),
+                    dr.GetDateTime(5),
+                    dr.GetBoolean(6),
+                    Endereco.ObterListaPorClienteId(dr.GetInt32(0))
+                    )
+                );
             }
             dr.Close();
             cmd.Connection.Close();
             return clientes;
         }
     }
+
 }
+
+
+
+

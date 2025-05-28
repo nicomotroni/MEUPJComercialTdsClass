@@ -80,10 +80,12 @@ namespace ComercialTDSClass
         /// 
         /// </summary>
         /// <returns></returns>
-        public bool Atualizar()
-        {
-            // como este método não é estático, precisamos considerar que 
+        public bool Atualizar()  
+            
+            //como este método não é estático, precisamos considerar que 
             // as propriedades já possuem valores atribuídos
+        {
+          
             bool atualizado = false;
             if (Id < 1) return atualizado;
             var cmd = Banco.Abrir();
