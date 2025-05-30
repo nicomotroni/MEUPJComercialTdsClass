@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Org.BouncyCastle.Crypto.Digests;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,34 +10,32 @@ namespace ComercialTDSClass
 {
     public class Estoque
     {
-        public int id { get; set; }
+        public int Id { get; set; }
+        public string NomeProduto { get; set; }
         public string? CodBarras { get; set; }
+        public int Quantidade { get; set; }
         public string? Descricao { get; set; }
         public double ValorUnit { get; set; }
-        public Categoria? Categoria { get; set;}
-        public DateTime DataCard { get; set; }
-        public byte[] imagem { get; set;}
-        public string? Nome { get; set;}
-        public Estoque() 
+        public Categoria? Categoria { get; set; }
+        public DateTime  DataEntrada { get; set; }
+        public byte[] imagem { get; set; }
+        public string Localizacao { get; set; }
+
+        public Estoque()
         {
-            Categoria = new();
-            public Estoque()
-        {
-            Categoria = new();
+
         }
-        public Estoque(int id, string? codBarras, string? descricao, double valorUnit, string? unidadeVenda, Categoria? categoria, double estoqueMinimo, double classeDesconto, byte[] imagem, DateTime dataCad, bool descontinuado)
+        public Estoque(int id, string nomeProduto, string codigoProduto,int quantidade)
+
         {
-            Id = id;
-            CodBarras = codBarras;
-            Descricao = descricao;
-            ValorUnit = valorUnit;
-            UnidadeVenda = unidadeVenda;
-            Categoria = categoria;
-            EstoqueMinimo = estoqueMinimo;
-            ClasseDesconto = classeDesconto;
-            Imagem = imagem;
-            DataCad = dataCad;
-            Descontinuado = descontinuado;
+
         }
+
+
+
+
+
+
+
         // os métodos não estão especificados na construção dele
         //precisa retirar alguns contrutores que não estão bem especificados 

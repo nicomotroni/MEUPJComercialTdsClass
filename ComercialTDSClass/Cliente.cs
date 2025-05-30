@@ -117,6 +117,7 @@ namespace ComercialTDSClass
                     dr.GetDateTime(5),
                     dr.GetBoolean(6),
                     Endereco.ObterListaPorClienteId(dr.GetInt32(0))
+
                     )
                 );
             }
@@ -127,7 +128,8 @@ namespace ComercialTDSClass
     }
 
 }
-
+//teste
+//teste 2 do arquivo zip
 
 
 
