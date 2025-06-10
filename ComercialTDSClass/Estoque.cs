@@ -39,4 +39,4 @@ namespace ComercialTDSClass
 
         // os métodos não estão especificados na construção dele
         //precisa retirar alguns contrutores que não estão bem especificados 
-        //atualizar aqui 10/06 inserir o estoque
+       //atualizar o estoque 10/06
